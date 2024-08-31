@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTarget" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E128" />
+          <option value="E127" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="jogos.models.Jogos.objects" />
+          <option value="usuarios.models.Usuario.objects" />
+          <option value="object.*" />
+          <option value="django.db.models.fields.related.ForeignKey.first_name" />
+          <option value="django.db.models.fields.related.ForeignKey.nome" />
+          <option value="jogos.models.Plataforma.*" />
+          <option value="usuarios.models.UsuarioJoga.*" />
+          <option value="usuarios.models.NickUsuario.*" />
+          <option value="pathlib.*" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="XmlInvalidId" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>
