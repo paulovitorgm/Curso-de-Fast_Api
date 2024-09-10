@@ -33,7 +33,7 @@ def test_create_user(client):
 
 
 def test_get_users(client):
-    response = client.get("/users/")
+    response = client.get('/users/')
     assert response.status_code == HTTPStatus.OK
 
     assert response.json() == {
@@ -48,14 +48,14 @@ def test_get_users(client):
 
 
 def test_get_users_unico(client):
-    response = client.get("/users/1/")
+    response = client.get('/users/1/')
     assert response.status_code == HTTPStatus.OK
 
     assert response.json() == {
-                'id': 1,
-                'username': 'Paulo',
-                'email': 'teste@teste.com',
-            }
+        'id': 1,
+        'username': 'Paulo',
+        'email': 'teste@teste.com',
+    }
 
 
 def test_exception_get_user_unico(client):
@@ -70,13 +70,14 @@ def test_update_user(client):
         json={
             'username': 'Paulo',
             'email': 'teste@test.com',
-            'password': '123456789'}
+            'password': '123456789',
+        },
     )
     assert response.json() == {
         'id': 1,
         'username': 'Paulo',
-        'email': 'teste@test.com'
-        }
+        'email': 'teste@test.com',
+    }
 
 
 def test_exception_update_user(client):
@@ -85,12 +86,11 @@ def test_exception_update_user(client):
         json={
             'username': 'Paulo',
             'email': 'teste@test.com',
-            'password': '123456789'}
+            'password': '123456789',
+        },
     )
     assert response.status_code == HTTPStatus.NOT_FOUND
-    assert response.json() == {
-            'detail': 'User not found'
-    }
+    assert response.json() == {'detail': 'User not found'}
 
 
 def test_delete_user(client):
